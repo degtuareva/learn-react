@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../react 2"
+		},
+		{
+			"path": "../../../../REACT"
+		},
+		{
+			"path": "../../../../react_test"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "REACT1"
+	}
+}
