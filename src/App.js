@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { Playstation } from "./Playstation";
-import { Eggs } from "./Eggs";
-import { Ground } from "./Ground";
+import React from "react";
 
+
+<<<<<<< HEAD
 // TODO input value two way binding4
 
 
@@ -33,3 +32,9 @@ export const App = () => {
 
 
 // 
+=======
+
+export const App = () => {
+    return <div>hello world!</div>
+}
+>>>>>>> 9050ccc125471c7719c98eafbd3527df654c9def
