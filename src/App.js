@@ -1,36 +1,34 @@
 import React, { useState } from "react";
-import { Playstation } from "./Playstation";
-import { Eggs } from "./Eggs";
-import { Ground } from "./Ground";
 
-// TODO input value two way binding4
-
-
-
-import React from "react";
-
-
+// TODO: useRef
 
 export const App = () => {
-  const [shouldShowText, setShouldShowText] = useState(false);
+  const [inpValue, setInpValue] = useState(""); // inpValue - это листик препода
 
-  const onChange = (e) => {
-    console.log(e.target.value);
+  const onInputChange = (event) => {
+    // event.target.value то что нашептал сосед
+    setInpValue(event.target.value); // передаем что нашептал сосед преподу
   };
 
-  const show = () => {
-    setShouldShowText((prevShowText) => !prevShowText);
+  const clearInp = () => {
+    setInpValue("");
   };
+
+  // создать селект (авто), сделать его контролируемым
+  // после каджого выбора, выводить на экран текущий выбранный элемент
+  // * сделать кнопку которая будет прятать или показывать текущий выбранный элемент(див) и селект
+  // ** всякий раз когда мы показываем элемент, он сохраняет последний выбранный авто
 
   return (
-    <>
-      <button onClick={show}>show</button>
-      {shouldShowText && <span>text</span>}
-      <input type="text" onChange={onChange} />
-      <Playstation />
-      <Eggs />
-      <Ground />
-    </>
+    <div>
+      <button onClick={clearInp}>clear</button>
+      <input 
+        value={inpValue} // препод передает листик что показывать
+        type="text"
+        id="inp"
+        onChange={onInputChange}
+      />
+      <div>Your input is: {inpValue}</div>
+    </div>
   );
 };
-
